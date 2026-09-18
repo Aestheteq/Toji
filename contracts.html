@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контракты | Тодзи Фушигуро</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">TOJI <span>FUSHIGURO</span> <span class="logo-jp">伏黒甚爾</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="bio.html">Биография</a></li>
+        <li><a href="weapons.html">Арсенал</a></li>
+        <li><a href="abilities.html">Способности</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contracts.html">Контракты</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="page-header">
+      <span class="subtitle">Услуги Наемника</span>
+      <h1>РАСЧЕТ СТОИМОСТИ КОНТРАКТА</h1>
+      <div class="jp-bg">契約</div>
+    </div>
+
+    <div class="manga-panel">
+      <h2 class="panel-title">КАЛЬКУЛЯТОР БУОНТИ / ГОНОРАРА</h2>
+      
+      <form id="contract-form" onsubmit="event.preventDefault();" style="margin-top: 20px;">
+        <div style="margin-bottom: 20px;">
+          <label style="font-weight: bold; display: block; margin-bottom: 8px;">Выберите категорию цели:</label>
+          <select id="target-type" style="width: 100%; padding: 12px; font-family: var(--font-body); font-weight: bold; border: 3px solid #000;">
+            <option value="50000000">Маг 2-го / 1-го ранга (50,000,000 ¥)</option>
+            <option value="200000000">Глава клана / Высший маг (200,000,000 ¥)</option>
+            <option value="500000000">Звездный Сосуд / Особый Уровень (500,000,000 ¥)</option>
+            <option value="1000000000">Годжо Сатору / Неуязвимый маг (1,000,000,000 ¥)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="font-weight: bold; display: block; margin-bottom: 8px;">Дополнительные усложнения:</label>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label><input type="checkbox" id="has-domain"> Цель владеет «Расширением Территории» (+150M ¥)</label>
+            <label><input type="checkbox" id="has-guards"> Цель под круглосуточной охраной элиты (+50M ¥)</label>
+            <label><input type="checkbox" id="is-urgent"> Срочный контракт (Меньше 48 часов) (+50% к цене)</label>
+          </div>
+        </div>
+
+        <div style="background: var(--ink-black); color: #fff; padding: 25px; border: 3px solid var(--blood-red); margin-top: 30px; text-align: center;">
+          <div style="text-transform: uppercase; font-size: 1rem; color: #aaa;">Итоговая стоимость контракта:</div>
+          <div id="total-price" style="font-family: var(--font-heading); font-size: 3.5rem; color: var(--blood-red); margin: 10px 0;">
+            ¥ 0
+          </div>
+          <button type="button" class="btn-manga" onclick="alert('Контракт принят. Деньги вперед на счет Фушигуро.'); if(window.playSlashSound) window.playSlashSound();">
+            ПОДПИСАТЬ КОВЕНАНТ
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="jp-footer">伏黒甚爾 • 呪術廻戦</div>
+    <p>© Тодзи Фушигуро — Манга Проект | Jujutsu Kaisen Tribute</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
